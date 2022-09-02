@@ -1,0 +1,137 @@
+# 打包 mvn clean package  -Dmaven.test.skip=true 排除测试代码
+# 服务器运行 nohup java -jar demo.jar >temp.txt &
+
+# 修改配置
+# spring.web.up-loadpath 上传文件的路径
+# mysql路径
+# redis路径
+# spring security过滤路径
+# TaskJob.java @Postconstruct注解
+
+server:
+  port: 8089
+
+jwt:
+  config:
+    key: wzj0731
+    ttl: 72000000
+    remember: 604800000
+logging:
+  level:
+    com.guyongzhe.shixun: debug
+custom:
+  config:
+    ignores:
+      # 需要过滤的 post 请求
+      post:
+        - "/login"
+        - "/logout"
+      # 需要过滤的请求，不限方法
+      pattern:
+        - "/**"
+        - "/test/*"
+
+es:
+  hosts: 101.132.107.178
+  port: 9200
+  username: es
+  password: 123456
+  schema: http  # 使用的协议
+  connectTimeOut: 1000 #连接超时时间
+  socketTimeOut: 30000 #连接超时时间
+  connectionRequestTimeOut: 500  #获取连接的超时时间
+  maxConnectNum: 100 #最大连接数
+  maxConnectPerRoute: 100 #最大路由连接数
+
+esParam:
+  indexName: testName # 索引名
+  indexType: "type" # 索引type，有可能是type或者doc
+  bulkSize: 500 # 一次bulk请求文档个数
+  docNum: 200000000 # 希望导入的数据总量
+
+
+quartz:
+  restartCron:
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+mybatis-plus:
+  # 配置日志
+  configuration.log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 配置逻辑删除
+  global-config.db-config.logic-delete-value: 1
+  global-config.db-config.logic-not-delete-value: 0
+  mapper-locations: classpath:mapper/*.xml
+
+
+spring:
+  servlet:
+    multipart:
+#      enable: true
+      max-file-size: 10MB
+      max-request-size: 1024MB
+  web:
+    upload-path: /shixunUpLoadFile
+    resources:
+      static-locations:
+        classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${spring.web.upload-path}
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 30000
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  datasource:
+    hikari:
+      username: root
+      password: SEUcse10086
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.132.107.178:3306/db?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
+  swagger:
+    enabled: true
+    title: 石化安全管理平台后端接口
+    description: 东南大学暑期实训项目
+    version: 1.0.0-SNAPSHOT
+    contact:
+      name: Zhengjin.Wang
+      email: 1054129203@qq.com
+      url: http://wzj.com
+    # swagger扫描的基础包，默认：全扫描
+    # base-package:
+    # 需要处理的基础URL规则，默认：/**
+    # base-path:
+    # 需要排除的URL规则，默认：空
+    # exclude-path:
+    security:
+      # 是否启用 swagger 登录验证
+      filter-plugin: false
+      username: lilac
+      password: 123456
+    global-response-messages:
+      GET[0]:
+        code: 400
+        message: Bad Request，一般为请求参数不对
+#      GET[1]:
+#        code: 404
+#        message: NOT FOUND，一般为请求路径不对
+#      GET[2]:
+#        code: 500
+#        message: ERROR，一般为程序内部错误
+#      POST[0]:
+#        code: 400
+#        message: Bad Request，一般为请求参数不对
+#      POST[1]:
+#        code: 404
+#        message: NOT FOUND，一般为请求路径不对
+#      POST[2]:
+#        code: 500
+#        message: ERROR，一般为程序内部错误

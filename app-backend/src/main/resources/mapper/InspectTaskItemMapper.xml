@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guyongzhe.shixun.mapper.InspectTaskItemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.guyongzhe.shixun.pojo.InspectTaskItem">
+        <id column="id" property="id" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="inspect_task_id" property="inspectTaskId" />
+        <result column="inspect_employee_id" property="inspectEmployeeId" />
+        <result column="finish" property="finish" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, start_time, end_time, inspect_task_id, inspect_employee_id, finish
+    </sql>
+    <select id="queryPointsByTaskItemId" resultType="com.guyongzhe.shixun.pojo.InspectPoint" parameterType="int">
+        select inspect_point.id, inspect_point.type, inspect_point.number, inspect_point.area, inspect_point.longitude, inspect_point.latitude, inspect_point.create_time, inspect_point.abnormal_number, inspect_point.finish, inspect_point.state, inspect_point.inspect_route_id, inspect_point.inspect_employee_id from inspect_task_item, inspect_task, inspect_route, inspect_point
+        where #{id} = inspect_task_item.id and inspect_task_item.inspect_task_id = inspect_task.id and inspect_task.inspect_route_id = inspect_route.id
+          and inspect_point.inspect_route_id = inspect_task.inspect_route_id
+    </select>
+    <select id="queryTaskNameByTaskItemId" resultType="java.lang.String" parameterType="int">
+        select task.task_name from inspect_task_item as item, inspect_task as task
+        where #{id} = item.id and item.inspect_task_id = task.id;
+    </select>
+
+</mapper>

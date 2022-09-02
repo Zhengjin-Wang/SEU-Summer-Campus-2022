@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guyongzhe.shixun.mapper.InspectEmployeeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.guyongzhe.shixun.pojo.InspectEmployee">
+        <id column="id" property="id" />
+        <result column="work_no" property="workNo" />
+        <result column="password" property="password" />
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+        <result column="inspect_class_id" property="inspectClassId" />
+        <result column="create_time" property="createTime" />
+        <result column="total_tasks" property="totalTasks" />
+        <result column="success_tasks" property="successTasks" />
+        <result column="post_anomaly_num" property="postAnomalyNum" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, work_no, password, name, phone, inspect_class_id, create_time, total_tasks, success_tasks, post_anomaly_num
+    </sql>
+
+</mapper>

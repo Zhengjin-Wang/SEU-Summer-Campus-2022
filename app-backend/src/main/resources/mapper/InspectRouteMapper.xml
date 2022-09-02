@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guyongzhe.shixun.mapper.InspectRouteMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.guyongzhe.shixun.pojo.InspectRoute">
+        <id column="id" property="id" />
+        <result column="route_name" property="routeName" />
+        <result column="inspect_point_number" property="inspectPointNumber" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, route_name, inspect_point_number
+    </sql>
+
+</mapper>

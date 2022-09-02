@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guyongzhe.shixun.mapper.InspectPointLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.guyongzhe.shixun.pojo.InspectPointLog">
+        <id column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="description" property="description" />
+        <result column="photo_path" property="photoPath" />
+        <result column="if_abnormal" property="ifAbnormal" />
+        <result column="inspect_point_id" property="inspectPointId" />
+        <result column="inspect_employee_id" property="inspectEmployeeId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, create_time, description, photo_path, if_abnormal, inspect_point_id, inspect_employee_id
+    </sql>
+
+</mapper>

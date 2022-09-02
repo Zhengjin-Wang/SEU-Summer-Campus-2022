@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guyongzhe.shixun.mapper.InspectTaskMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.guyongzhe.shixun.pojo.InspectTask">
+        <id column="id" property="id" />
+        <result column="task_name" property="taskName" />
+        <result column="schedule" property="schedule" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="finish" property="finish" />
+        <result column="inspect_class_id" property="inspectClassId" />
+        <result column="inspect_route_id" property="inspectRouteId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, task_name, schedule, start_time, end_time, finish, inspect_class_id, inspect_route_id
+    </sql>
+
+</mapper>
