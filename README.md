@@ -1,6 +1,8 @@
 # SEU-Summer-Campus-2022
 石化安全管理平台，有网页端和移动端两个部分，网页端实现了巡检任务的安排，危险源监控，移动端实现了巡检人员的巡检上报
 
+项目地址: https://github.com/qq1054129023/SEU-Summer-Campus-2022
+
 ### 网页端后端
 
 ​	使用redis和mysql，redis默认需要本地环境，mysql默认连接远程数据库，在application.properties中修改连接url
