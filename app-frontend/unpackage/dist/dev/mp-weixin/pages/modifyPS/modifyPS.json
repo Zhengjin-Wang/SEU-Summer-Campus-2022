@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "修改密码",
+  "navigationBarBackgroundColor": "#7B68EE",
+  "usingComponents": {
+    "u-input": "/node-modules/uview-ui/components/u-input/u-input",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "u-toast": "/node-modules/uview-ui/components/u-toast/u-toast"
+  }
+}

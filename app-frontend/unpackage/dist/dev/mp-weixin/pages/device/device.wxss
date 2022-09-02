@@ -1,0 +1,8 @@
+
+.mybutton {
+	padding-top: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	color: "#7B68EE"
+}
+

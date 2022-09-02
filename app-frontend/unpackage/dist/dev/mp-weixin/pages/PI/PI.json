@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor": "#7B68EE",
+  "usingComponents": {
+    "u-cell-group": "/node-modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell": "/node-modules/uview-ui/components/u-cell/u-cell",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

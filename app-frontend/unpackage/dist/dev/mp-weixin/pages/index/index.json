@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#7B68EE",
+  "onReachBottomDistance": 200,
+  "usingComponents": {
+    "u-swiper": "/node-modules/uview-ui/components/u-swiper/u-swiper",
+    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
+    "qiun-data-charts": "/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts"
+  }
+}

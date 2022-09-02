@@ -1,0 +1,139 @@
+{
+	"easycom": {
+		"^u-(.*)":"uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	    {
+	    	"path": "pages/index/index",//首页
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor":"#7B68EE",
+				"onReachBottomDistance": 200
+			}
+	    },
+		{
+			"path": "pages/task/task",//待完成
+			"style": {
+				"navigationBarTitleText": "待完成",
+				"navigationBarBackgroundColor":"#7B68EE"
+			}
+		},
+		{
+			
+			"path": "pages/login/login",//登录
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationBarBackgroundColor":"#7B68EE"
+			}
+		}
+
+	    ,{
+            "path" : "pages/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情页",
+                "navigationBarBackgroundColor":"#7B68EE"
+            }
+            
+        }
+        ,{
+            "path" : "pages/PI/PI",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+                "navigationBarBackgroundColor":"#7B68EE"
+            }
+            
+        }
+     
+        ,{
+            "path" : "pages/modifyPS/modifyPS",
+            "style" :                                                                                    
+            {
+               "navigationBarTitleText": "修改密码",
+               "navigationBarBackgroundColor":"#7B68EE"
+            }
+            
+        }
+		
+		,{
+		    "path" : "pages/deviceInfo/deviceInfo",
+		    "style" :                                                                                    
+		    {
+		       "navigationBarTitleText": "设备信息",
+		       "navigationBarBackgroundColor":"#7B68EE"
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/device/device",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "巡检地图",
+                "navigationBarBackgroundColor":"#7B68EE"
+			}	
+   //          },
+			// "permission": {
+			//     "scope.userLocation": {
+			//       "desc": "你的位置信息将用于小程序位置接口的效果展示" // 高速公路行驶持续后台定位
+			//     }
+			//   }
+            
+        }
+        ,{
+            "path" : "pages/test/test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",//导航栏文字颜色
+		"navigationBarTitleText": "石化安全",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+		// "enablePullDownRefresh":true
+
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#7B68EE",
+		"selectedColor": "#000000",
+		"backgroundColor": "#FFFFFF",
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/homeH.png"
+			},
+			{
+				"text": "待完成",
+				"pagePath": "pages/task/task",
+				"iconPath": "static/discovery.png",
+				"selectedIconPath": "static/discoveryH.png"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/PI/PI",
+				"iconPath": "static/mine.png",
+				"selectedIconPath": "static/mineH.png"
+			} 
+
+			
+		]
+	},
+	"condition": {
+		"current": 0,
+		"list": [
+			{
+				"name": "详情页",
+				"path": "pages/detail/detail",
+				"query": "id=80"
+			}
+		]
+	}
+}

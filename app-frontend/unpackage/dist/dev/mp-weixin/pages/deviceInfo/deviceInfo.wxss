@@ -1,0 +1,12 @@
+
+.example-body {
+	padding: 10px;
+	padding-top: 0;
+}
+.example-body-1 {
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 0;
+	padding-bottom: 10px;
+}
+

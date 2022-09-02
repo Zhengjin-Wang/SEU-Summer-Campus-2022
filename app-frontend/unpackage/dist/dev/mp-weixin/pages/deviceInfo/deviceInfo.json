@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "设备信息",
+  "navigationBarBackgroundColor": "#7B68EE",
+  "usingComponents": {
+    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
+    "u-cell-group": "/node-modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell": "/node-modules/uview-ui/components/u-cell/u-cell",
+    "u-picker": "/node-modules/uview-ui/components/u-picker/u-picker",
+    "u--textarea": "/node-modules/uview-ui/components/u--textarea/u--textarea",
+    "uni-file-picker": "/uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="page-section page-section-gap"><map class="vue-ref" style="width:100%;height:540px;" latitude="{{maplatitude}}" longitude="{{maplongitude}}" markers="{{markers}}" show-location="{{true}}" polyline="{{mypolyline}}" enable-3D="{{true}}" show-compass="{{true}}" id="map1" data-ref="map1"></map></view>
