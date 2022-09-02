@@ -13,12 +13,16 @@
 
 ​	使用yarn作为包管理工具
 
-```powershell
-yarn install #安装包
-```
+安装依赖
 
 ```powershell
-yarn serve #启动前端服务
+yarn install 
+```
+
+启动服务
+
+```powershell
+yarn serve 
 ```
 
 默认连接是云服务器地址，在main.js可修改
